@@ -163,7 +163,7 @@ public class Login extends javax.swing.JFrame {
                 this.dispose();
                 new NhanVienFr().setVisible(true);
             }else{
-                JOptionPane.showMessageDialog(this, "Sai tên đăng nhập hoặc mật khẩu");
+                JOptionPane.showMessageDialog(this, "Tên đăng nhập hoặc mật khẩu không khớp");
                 return;
             }
         }else{
