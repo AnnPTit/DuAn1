@@ -4,7 +4,7 @@
  */
 package Repository;
 
-import ConfigHibernate.ConfigHibernate;
+import ConfigHibernate.HibernateConfig;
 import Model.NhanVien;
 import java.util.List;
 import org.hibernate.Criteria;
@@ -18,7 +18,7 @@ import org.hibernate.Session;
  */
 public class NhanVienRepository {
 
-    Session session = ConfigHibernate.getFACTORY().openSession();
+    Session session = HibernateConfig.getFACTORY().openSession();
 
     public List<NhanVien> getList() {
         Query q = session.createQuery("From NhanVien");

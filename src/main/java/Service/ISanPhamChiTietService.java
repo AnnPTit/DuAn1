@@ -15,4 +15,6 @@ public interface ISanPhamChiTietService {
     
      List<SanPham> getList();
      String add(SanPham sanPham);
+     String update(SanPham sanPham);
+      String delete(SanPham sanPham);
 }

@@ -21,7 +21,7 @@ import org.hibernate.service.ServiceRegistry;
  *
  * @author ADMIN
  */
-public class ConfigHibernate {
+public class HibernateConfig {
 
     private static final SessionFactory FACTORY;
 
