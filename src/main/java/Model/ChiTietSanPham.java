@@ -4,9 +4,13 @@
  */
 package Model;
 
+import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
@@ -14,8 +18,15 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CHITIETSP")
-public class ChiTietSanPham {
+public class ChiTietSanPham implements Serializable{
+
     @Id
+    @GenericGenerator(name = "generator", strategy = "guid", parameters = {})
+    @GeneratedValue(generator = "generator")
+    @Column(name = "ID")
+    private String id ;
     
     
+    
+
 }
