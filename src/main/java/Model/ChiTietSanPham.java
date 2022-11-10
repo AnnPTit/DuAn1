@@ -28,6 +28,8 @@ public class ChiTietSanPham implements Serializable{
     
     @Column(name = "MaCTSP")
     private String maCTSP ;
+    @Column(name = "idSp")
+    private String idSp ;
     
     
     
