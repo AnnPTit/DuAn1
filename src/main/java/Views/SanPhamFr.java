@@ -262,7 +262,8 @@ public class SanPhamFr extends javax.swing.JFrame {
         }
         String result = sanPhamChiTietService.update(sanPham);
         Mes(result);
-        loadTable(sanPhamChiTietService.getList());
+        List<SanPham> list = sanPhamChiTietService.getList();
+        loadTable(list);
         //     loadTable(sanPhamChiTietService.getList());
     }//GEN-LAST:event_btnSuaActionPerformed
 

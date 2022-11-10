@@ -47,12 +47,10 @@
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="lbnMesTen" pref="234" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lbnMesMa" max="32767" attributes="0"/>
-                      <Component id="txtMa" alignment="0" pref="234" max="32767" attributes="0"/>
-                      <Component id="txtten" pref="234" max="32767" attributes="0"/>
-                      <Component id="cbxSize" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="lbnMesMa" max="32767" attributes="0"/>
+                  <Component id="txtMa" alignment="0" pref="234" max="32767" attributes="0"/>
+                  <Component id="txtten" pref="234" max="32767" attributes="0"/>
+                  <Component id="cbxSize" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="82" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">

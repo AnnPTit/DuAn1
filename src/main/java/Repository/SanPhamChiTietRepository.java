@@ -7,6 +7,8 @@ package Repository;
 import ConfigHibernate.HibernateConfig;
 import Model.SanPham;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -20,9 +22,15 @@ public class SanPhamChiTietRepository {
     private Session session = HibernateConfig.getFACTORY().openSession();
 
     public List<SanPham> getList() {
-        Query q = session.createQuery("From SanPham");
+        EntityManager em = session.getEntityManagerFactory().createEntityManager();
+        em.getEntityManagerFactory().getCache().evictAll();
+        EntityTransaction entityTransaction = em.getTransaction();
+       
+        Query q = (Query) em.createQuery("From SanPham");
+        q.setHint("javax.persistence.cache.retrieveMode", "BYPASS");
+
         List<SanPham> list = q.getResultList();
-        return list;
+        return list; 
     }
 
     public Boolean add(SanPham sanPham) {

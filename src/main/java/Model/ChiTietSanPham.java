@@ -33,7 +33,8 @@ public class ChiTietSanPham implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "idSp",nullable = false)
-    private SanPham sanPham; 
+    private SanPham sanPham;  
+    
     
     
     
