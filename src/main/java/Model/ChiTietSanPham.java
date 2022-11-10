@@ -9,6 +9,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -18,20 +20,23 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "CHITIETSP")
-public class ChiTietSanPham implements Serializable{
+public class ChiTietSanPham implements Serializable {
 
     @Id
     @GenericGenerator(name = "generator", strategy = "guid", parameters = {})
     @GeneratedValue(generator = "generator")
     @Column(name = "ID")
-    private String id ;
-    
+    private String id;
+
     @Column(name = "MaCTSP")
-    private String maCTSP ;
-    @Column(name = "idSp")
-    private String idSp ;
+    private String maCTSP;
+
+    @ManyToOne
+    @JoinColumn(name = "idSp",nullable = false)
+    private SanPham sanPham; 
     
     
     
+
 
 }
