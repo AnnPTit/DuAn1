@@ -24,7 +24,8 @@ import org.hibernate.service.ServiceRegistry;
 public class HibernateConfig {
 
     private static final SessionFactory FACTORY;
-
+    // ajkdhak
+    // aksdhjkja
     static {
         Configuration conf = new Configuration();
         Properties properties = new Properties();
